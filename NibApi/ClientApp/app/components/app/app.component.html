@@ -1,0 +1,51 @@
+<nav class="navbar navbar-inverse navbar-fixed-top" style="background-color:#545e63;">
+    <div class="container">
+
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#" style="color:white">Numeric Sequence Calculator - By Khanh Ngo</a>
+        </div>
+    </div>
+</nav>
+
+<div class='container' style="margin-top:50px;">
+    <div class="row">
+        <div class="col-md-12">
+            <h4 style="display:inline-block">Please enter a number</h4>.
+            <span style="display:inline-block">The number must be positive, whole number</span>
+        </div>
+    </div>
+    <div class="row">
+
+        <div class="alert alert-danger" *ngIf="numberref.errors" >Please enter positive whole number only</div>
+    </div>
+    <div class='row'>
+        <div class='col-sm-12'>
+            <div class="form-group">
+                <label for="value">Number:</label>
+                <input class="form-group" type="number" (keyup)="onKey($event, numberref.valid)" id="value" [(ngModel)]="number" name="number" #numberref="ngModel"  pattern="^\d+$" />
+                <span *ngIf="value"><b>You Entered:{{value}}</b></span>
+            </div>
+        </div>
+    </div>
+    <div class="container" *ngIf="value">
+        <div class="row">
+            <div class="col-sm-3 col-md-3" style="">
+                <div class="alert alert-success" role="alert">All numbers up to and including the number entered</div>
+                <p style="word-wrap:break-word">{{allNumber }}</p>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <div class="alert alert-info" role="alert">All even numbers up to and including the number entered</div>
+                <p style="word-wrap:break-word">{{evenNumber }}</p>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <div class="alert alert-warning" role="alert">All odd numbers up to and including the number entered</div>
+                <p style="word-wrap:break-word">{{oddNumber }}</p>
+            </div>
+            <div class="col-sm-3 col-md-3">
+                <div class="alert alert-danger" role="alert">All numbers up to and including the number entered with conditions.</div>
+                <p style="word-wrap:break-word">{{allNumberWithCharacter }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
