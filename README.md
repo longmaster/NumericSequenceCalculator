@@ -1,4 +1,4 @@
-# Numeric Sequence Calculator by Khanh Ngo
+# Numeric Sequence Calculator
 
 # Technologies
 
@@ -22,4 +22,5 @@ and when a number is a multiple of both 3 and 5 output Z
 #Demo on Azure
 http://numericsequencecalculator.azurewebsites.net
 
-
+  ![alt text](https://raw.githubusercontent.com/longmaster/NumericSequenceCalculator/master/NibApi/wwwroot/numeric_picture.png)
+  ![alt text](https://github.com/longmaster/NumericSequenceCalculator/raw/master/NibApi/wwwroot/numeric_picture_2.png)
